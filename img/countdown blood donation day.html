@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Blood donation day</title>
+		<link rel="stylesheet" href="style.css
+		<script src="myscripts.js"></script>
+
+	</head>
+		<body>
+			<div class="container">
+				<h1><span>Blood Donation Day Cermony</span>2022</h1>
+				<div class="countdown">
+					<div id="day">NN</div>
+					<div id="hour">NN</div>
+					<div id="minitues">NN</div>
+					<div id="second">NN</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+			var countDate=new Date('June 14,2022 00:00:00').getTime();
+			
+			function bloodDonorDay(){
+				var now=new Date().getTime();
+				gap=countDate-now;
+				
+					var second=1000;
+					var minitue=second*60;
+					var hour=minitue*60
+					var day=hour*24;
+					
+					var d=Math.floor(gap/(day));
+					var h=Math.floor(gap%(day))/(hour);
+					var m=Math.floor(gap%(hour))/(miniute);
+					var w=Math.floor(gap%(miniute))/(second);
+					
+					document.getElementById('day').innerText=d;
+					document.getElementById('hour').innerText=h;
+					document.getElementById('miniute').innerText=m;
+					document.getElementById('second').innerText=s;
+					
+				}
+				
+				setInterval(function(){
+					bloodDonorDay();
+				},1000)
+				
+			</script>
+		</body>
+</html>
